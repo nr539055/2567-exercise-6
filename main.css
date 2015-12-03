@@ -36,8 +36,12 @@ html {
 }
 body {
 	font-family: 'Open Sans', sans-serif;
+}
+
+nav a, body, address span a, form a {
 	color: white;
 }
+
 /*--------------------------------------------------------------
 1.1 - BODY
 -------------------------------------------------------------- */
@@ -56,9 +60,7 @@ body {
 -------------------------------------------------------------- */
 h1 {
     font-size: 5.5rem;
-    background-color: rgba(255,255,255,.5);
     line-height: 5rem;
-    text-align: center;
     padding: 20px;
 }
 
@@ -81,7 +83,7 @@ h4 {
 form {
 	padding-left:20px;
 }
-form div {
+form div, input, textarea {
 	padding: 10px;
 }
 form .col-1 {
@@ -92,37 +94,36 @@ label {
 }
 input, textarea {
 	background-color: #19896e;
-	width: 100%;
-	padding: 10px;
 	border:1px solid #19896e;
 }
 input:focus, textarea:focus {
 	outline:none;
 	border:1px solid #115e4b;
 }
-::-webkit-input-placeholder {
-   color: white;
+::-webkit-input-placeholder{
+	color: white;
 }
 
-:-moz-placeholder { /* Firefox 18- */
-   color: white;  
+:-moz-placeholder /* Firefox 18- */ {
+	color: white;
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
-   color: white;  
+::-moz-placeholder /* Firefox 19+ */ {
+ 	color: white;
 }
 
-:-ms-input-placeholder {  
-   color: white;  
+:-ms-input-placeholder {
+  	color: white;
 }
+
 form a {
 	margin-top: 20px;
 	padding:10px 20px;
 	background-color: #146c57;
 	text-transform: uppercase;
-	color: white;
-	text-decoration: none;
-	display:inline-block;
+}
+
+form, address span a{
 	font-weight: 600;
 }
 
@@ -131,19 +132,18 @@ form a:hover {
 	background-color: white;
 	
 }
+
+form a, nav li, dt, dd, address span:first-child {
+	display: inline-block;
+}
 /*--------------------------------------------------------------
 1.5 - LISTS
 -------------------------------------------------------------- */
-dt, dd {
-	display: inline-block
-}
 dt {
 	font-weight:100;
 	width: 20px;
 }
-dd {
-	font-weight: 600;
-}
+
 /*--------------------------------------------------------------
 2.0 - MAIN MENU
 -------------------------------------------------------------- */
@@ -152,20 +152,21 @@ nav {
 	text-align: right;
 }
 
-nav li  {
-	display:inline-block;
+nav li {
 	list-style: none;
 	padding: 0 20px;
     font-weight: 700;
 }
 
 nav a {
-	color: white;
-	text-decoration: none;
 	padding:10px;
 }
 
-nav a:hover {
+nav a, form a, address span a  {
+	text-decoration: none;
+}
+
+nav a:hover, h1 {
 	background-color: rgba(255,255,255,.5);
 }
 
@@ -182,6 +183,9 @@ nav a:hover {
 
 .wrapper {
 	width: 80%; /*original width was 1170px*/
+}
+
+.wrapper, .center-block {
 	margin: 0 auto;
 }
 
@@ -189,10 +193,6 @@ nav a:hover {
 	content: " ";
 	display: table;
 	clear: both;
-}
-
-img {
-	max-width: 100%;
 }
 
 figure {
@@ -216,7 +216,7 @@ figure {
 /*--------------------------------------------------------------
 3.1 - SINGLE COLUMNS
 -------------------------------------------------------------- */
-.col-1 {
+.col-1, input, textarea, img {
 	width: 100%;
 }
 
@@ -386,7 +386,7 @@ figure {
 .txt-uppercase {
 	text-transform:uppercase;
 }
-.txt-center {
+.txt-center, h1 {
 	text-align: center;
 }
 /*--------------------------------------------------------------
@@ -418,7 +418,6 @@ figure {
 -------------------------------------------------------------- */
 
 .center-block {
-	margin: 0 auto;
 	float: none !important;
 }
 
