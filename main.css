@@ -431,6 +431,42 @@ figure {
 
 
 @media screen and (max-width: 768px) {
-	
-	
+
+	.wrapper, .col-1 {
+		width: 98%;
+	}
+
+	.col-1-2, .col-1-4 {
+		width: 100%
+	}
+
+	.col-3-5 {
+		width: 63%;
+	}
+
+	.col-1-6 {
+		width: 30%;
+	}
+
+	footer section .col-1-2 {
+		width:50%;
+	}
+
+	nav li {
+		padding:0;
+	}
+
+	nav ul, .col-1-4{
+		padding:0;
+	}
+
+	form .col-1-2{
+		width: 50%;
+	}
+
+	form .col-1-2 {
+		padding-right: 38px;
+	}
+
+
 }
